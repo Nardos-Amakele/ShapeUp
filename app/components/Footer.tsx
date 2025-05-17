@@ -3,8 +3,8 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="bg-blue-500 text-black p-10">
-            <h2 className="text-3xl font-bold">ShapeUp</h2>
+        <footer className="bg-[#FFF200] text-black px-10 py-4">
+            <h2 className="text-2xl font-bold">ShapeUp</h2>
 
             <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
                 {/* Left: Brand Name */}
@@ -12,7 +12,7 @@ const Footer = () => {
                 </div>
 
                 {/* Right: Links and Contact */}
-                <div className="flex flex-col sm:flex-row gap-10 w-full lg:w-3/5 justify-between">
+                <div className="flex flex-col text-sm sm:flex-row gap-10 w-full lg:w-3/5 justify-between">
                     {/* Column 1 */}
                     <div>
                         <p className="mb-1">About Us</p>
@@ -29,18 +29,18 @@ const Footer = () => {
 
                     {/* Column 3: Contact */}
                     <div>
-                        <h3 className="font-bold text-xl mb-2">Connect With Us</h3>
+                        <h3 className="font-semibold text-xl mb-2">Connect With Us</h3>
                         <form className="relative w-full max-w-sm">
                             <input
                                 type="email"
-                                placeholder="Enter your email"
-                                className="p-3 pr-12 w-full  bg-white text-black"
+                                placeholder="Your email address"
+                                className="p-3 pr-12 w-full  bg-[#d9d9d9e8] rounded-[8px] text-black"
                             />
                             <button
                                 type="submit"
-                                className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-yellow-400 hover:bg-yellow-500 text-black p-2 rounded-full transition"
+                                className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black  text-[#FFF200] p-2 rounded-full transition"
                             >
-                                <FaArrowRight />
+                                <FaArrowRight  className="text-xl font-extralight"/>
                             </button>
                         </form>
                     </div>
@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom Center Text */}
-            <div className="text-center mt-10 text-sm ">
+            <div className="text-center font-extralight mt-10 text-sm ">
                 © {new Date().getFullYear()} ShapeUp. All rights reserved.
             </div>
         </footer>

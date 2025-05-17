@@ -3,12 +3,12 @@ import Image from 'next/image';
 const Services = () => {
     return (
         <section className="p-20">
-            <h2 className="text-3xl font-bold mb-20 text-center">Our Services</h2>
+            <h2 className="text-4xl font-medium mb-20 text-center">Explore Our Offerings</h2>
 
-            <div className="flex items-start gap-6 px-48">
-                <div className="w-24 h-24 relative p-4">
+            <div className="flex items-end gap-6 px-40 mb-6"> {/* Changed items-start to items-end */}
+                <div className="w-24 h-24 relative p-4 -mb-[1px]"> {/* Added negative margin-bottom */}
                     <Image
-                        src="/your-small-image.jpg" // Replace this with your actual image path
+                        src="/bodyBuilding.jpg"
                         alt="Service Icon"
                         fill
                         className="object-cover rounded"
@@ -17,12 +17,11 @@ const Services = () => {
 
                 <div className="pt-1 flex-1">
                     <div className="flex items-center justify-between relative">
-                        <span className="text-xl font-semibold ">Gym</span>
-
-                        <div className="transform rotate-[15deg] pb-4">
+                        <span className="text-2xl font-medium">Body Building</span>
+                        <div className="transform rotate-[15deg] pb-4 text-[#FFF200]">
                             <svg
-                                width="25"
-                                height="25"
+                                width="30"
+                                height="30"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -32,17 +31,14 @@ const Services = () => {
                             </svg>
                         </div>
                     </div>
-
-                    {/* Underline under both text and arrow */}
                     <div className="h-[1px] bg-white mt-1 w-full"></div>
                 </div>
-                
             </div>
             
-            <div className="flex items-start gap-6 px-48">
-                <div className="w-24 h-24 relative p-4">
+            <div className="flex items-end gap-6 px-40 mb-6"> {/* Changed items-start to items-end */}
+                <div className="w-24 h-24 relative p-4 -mb-[1px]"> {/* Added negative margin-bottom */}
                     <Image
-                        src="/your-small-image.jpg" // Replace this with your actual image path
+                        src="/aerobics.jpg"
                         alt="Service Icon"
                         fill
                         className="object-cover rounded"
@@ -51,12 +47,11 @@ const Services = () => {
 
                 <div className="pt-1 flex-1">
                     <div className="flex items-center justify-between relative">
-                        <span className="text-xl font-semibold ">Gym</span>
-
-                        <div className="transform rotate-[15deg] pb-4">
+                        <span className="text-2xl font-medium">Aerobics</span>
+                        <div className="transform rotate-[15deg] pb-4 text-[#FFF200]">
                             <svg
-                                width="25"
-                                height="25"
+                                width="30"
+                                height="30"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -66,17 +61,14 @@ const Services = () => {
                             </svg>
                         </div>
                     </div>
-
-                    {/* Underline under both text and arrow */}
                     <div className="h-[1px] bg-white mt-1 w-full"></div>
                 </div>
-                
             </div>
             
-            <div className="flex items-start gap-6 px-48">
-                <div className="w-24 h-24 relative p-4">
+            <div className="flex items-end gap-6 px-40 mb-6"> 
+                <div className="w-24 h-24 relative p-4 -mb-[1px]"> 
                     <Image
-                        src="/your-small-image.jpg" // Replace this with your actual image path
+                        src="/futsal.jpg"
                         alt="Service Icon"
                         fill
                         className="object-cover rounded"
@@ -85,12 +77,11 @@ const Services = () => {
 
                 <div className="pt-1 flex-1">
                     <div className="flex items-center justify-between relative">
-                        <span className="text-xl font-semibold ">Gym</span>
-
-                        <div className="transform rotate-[15deg] pb-4">
+                        <span className="text-2xl font-medium">Futsal</span>
+                        <div className="transform rotate-[15deg] text-[#FFF200] pb-4">
                             <svg
-                                width="25"
-                                height="25"
+                                width="30"
+                                height="30"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -100,11 +91,8 @@ const Services = () => {
                             </svg>
                         </div>
                     </div>
-
-                    {/* Underline under both text and arrow */}
                     <div className="h-[1px] bg-white mt-1 w-full"></div>
                 </div>
-                
             </div>
         </section>
     );

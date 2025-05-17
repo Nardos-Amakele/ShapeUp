@@ -5,27 +5,28 @@ import Image from 'next/image';
 const members = [
   {
     name: 'Nardos Amakele',
-    image: '/images/member1.jpg',
+    image: '/heroPic.jpg',
   },
   {
     name: 'Samuel Tesfaye',
-    image: '/images/member2.jpg',
+    image: '/hannah.jpg',
   },
   {
     name: 'Lidiya Gebru',
-    image: '/images/member3.jpg',
+    image: '/guyGreen.jpg',
   },
   {
     name: 'Dawit Mekonnen',
-    image: '/images/member4.jpg',
+    image: '/bodyBuilding.jpg',
   },
 ];
 
 const TeamMembers = () => {
   return (
-    <div className="px-8 py-12 w-full flex flex-col items-center">
+    <div className="px-8 py-12 w-full flex flex-col items-center mb-40">
       {/* Title */}
-      <h2 className="text-center text-2xl font-semibold mb-10">Meet Our Team</h2>
+      <h2 className="text-center text-xl font-bold text-[#FFF200] mb-3">The Team</h2>
+      <p className='mb-16 text-center text-3xl'> Our Professional Trainers</p>
 
       {/* Scrollable Members */}
       <div className="overflow-x-auto scrollbar-hide w-full">
@@ -46,9 +47,9 @@ const TeamMembers = () => {
               <h3 className="text-sm font-medium">{member.name}</h3>
 
               {/* Icons */}
-              <div className="flex justify-center mt-1 space-x-3 text-blue-600 text-sm">
-                <FaPhoneAlt className="hover:text-blue-800 cursor-pointer" />
-                <FaEnvelope className="hover:text-blue-800 cursor-pointer" />
+              <div className="flex justify-center mt-1 space-x-3 text-sm">
+                <FaPhoneAlt className=" text-[#FFF200] cursor-pointer" />
+                <FaEnvelope className=" text-[#FFF200] cursor-pointer" />
               </div>
             </div>
           ))}

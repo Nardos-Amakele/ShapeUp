@@ -20,9 +20,9 @@ const Bmi = () => {
 
     return (
         <section className="p-20 mx-20 text-black">
-            <div className="bg-white p-10">
-                <h2 className="text-3xl font-bold mb-5 text-center">Know Where You Fit</h2>
-                <p className="text-center px-10 mb-10">
+            <div className="bg-[#C3C3C3] p-10">
+                <h2 className="text-4xl font-bold mb-5 text-center">Know Where You Fit In</h2>
+                <p className="text-center text-xl px-16 mb-10">
                     ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem lorem ipsum lorem
                 </p>
 
@@ -30,23 +30,23 @@ const Bmi = () => {
                 <div className="flex flex-col items-center gap-6">
                     <input
                         type="number"
-                        placeholder="Enter weight in kg"
+                        placeholder="Weight(Kg)"
                         value={weight}
                         onChange={(e) => setWeight(e.target.value)}
-                        className="border border-gray-300 rounded px-4 py-2 w-full text-center max-w-xs"
+                        className="border-2 border-black  px-4 py-2 w-full text-center max-w-xs rounded-[8px]"
                     />
                     <input
                         type="number"
-                        placeholder="Enter height in cm"
+                        placeholder="Height(cm)"
                         value={height}
                         onChange={(e) => setHeight(e.target.value)}
-                        className="border border-gray-300 rounded px-4 py-2 w-full text-center max-w-xs"
+                        className="border-2 border-black  px-4 py-2 w-full text-center max-w-xs rounded-[8px]"
                     />
                     <button
                         onClick={calculateBMI}
-                        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+                        className="text-[#FFF200] bg-black px-8 py-2  font-bold rounded-[8px] transition"
                     >
-                        Calculate BMI
+                        Results
                     </button>
 
                     {/* Display Result */}
