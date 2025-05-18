@@ -2,21 +2,21 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
     return (
-        <section className="p-20 mx-30 mb-40">
-            <div className="flex flex-col lg:flex-row ">
+        <section className="px-6 py-12 lg:px-45 mb-40">
+            <div className="flex flex-col lg:flex-row gap-8">
                 {/* Left side: Contact Info */}
-                <div className="flex-1">
-                    <h2 className="text-3xl font-medium mb-6">Get in Touch</h2>
-                    <div className="space-y-2 text-lg">
-                        <div className="flex text-sm items-center gap-4">
+                <div className="flex-1 text-center lg:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-medium mb-6">Get in Touch</h2>
+                    <div className="space-y-4 text-base sm:text-lg">
+                        <div className="flex items-center justify-center lg:justify-start gap-3">
                             <FaPhone className="text-[#FFF200]" />
                             <span>+123 456 7890</span>
                         </div>
-                        <div className="flex text-sm items-center gap-4">
+                        <div className="flex items-center justify-center lg:justify-start gap-3">
                             <FaEnvelope className="text-[#FFF200]" />
                             <span>email@example.com</span>
                         </div>
-                        <div className="flex text-sm items-center gap-4">
+                        <div className="flex items-center justify-center lg:justify-start gap-3">
                             <FaMapMarkerAlt className="text-[#FFF200]" />
                             <span>123 Main St, City, Country</span>
                         </div>
@@ -31,7 +31,7 @@ const Contact = () => {
                         height="200"
                         allowFullScreen
                         loading="lazy"
-                        className=" shadow border-4 rounded-[8px] border-[#FFF200]"
+                        className="shadow border-4 rounded-[8px] border-[#FFF200] w-full"
                     ></iframe>
                 </div>
             </div>
