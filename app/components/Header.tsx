@@ -16,11 +16,10 @@ const Header = () => {
 
                 {/* Center: Navigation (hidden on small screens) */}
                 <nav className="hidden md:flex gap-8 text-sm font-medium">
-                    <Link href="#home" className="hover:text-[#FFF200] transition">Home</Link>
-                    <Link href="#services" className="hover:text-[#FFF200] transition">Services</Link>
-                    <Link href="#about" className="hover:text-[#FFF200] transition">About</Link>
-                    <Link href="#contact" className="hover:text-[#FFF200] transition">Contact</Link>
-                    <Link href="#faq" className="hover:text-[#FFF200] transition">FAQ</Link>
+                    <Link href="/" className="hover:text-[#FFF200] transition">Home</Link>
+                    <Link href="/about" className="hover:text-[#FFF200] transition">About</Link>
+                    <Link href="/service" className="hover:text-[#FFF200] transition">Services</Link>
+                    <Link href="/Contact" className="hover:text-[#FFF200] transition">Contact</Link>
                 </nav>
 
                 {/* Right: Buttons (hidden on small screens) */}
@@ -47,11 +46,10 @@ const Header = () => {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden mt-2 px-6 py-4 bg-[#d9d9d930] shadow-md backdrop-blur-md text-white rounded-xl flex flex-col gap-4 text-sm font-medium z-50">
-                    <Link href="#home" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">Home</Link>
-                    <Link href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">Services</Link>
-                    <Link href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">About</Link>
+                    <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">Home</Link>
+                    <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">About</Link>
+                    <Link href="/service" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">Services</Link>
                     <Link href="#contact" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">Contact</Link>
-                    <Link href="#faq" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">FAQ</Link>
                     <Link href="/login" onClick={() => setIsMenuOpen(false)} className="hover:text-[#FFF200] text-center transition">Log In</Link>
 
                     {/* Centered Register Button */}

@@ -23,7 +23,7 @@ const Hero = () => {
                             Register
                         </button>
                     </Link>
-                    <Link href="/learn-more">
+                    <Link href="/about">
                         <button className="bg-[#232323] rounded-[8px] text-white px-14 py-2 transition">
                             More about ShapeUp
                         </button>
