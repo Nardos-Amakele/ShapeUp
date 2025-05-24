@@ -55,16 +55,16 @@ const LoginPage = () => {
         const { role, status } = decodedToken;
 
         if (role === "admin" || role === "moderator" || role === "root") {
-          router.push("/en/admin");
+          router.push("/admin");
         } else if (role === "user") {
           const userRoutes: { [key: string]: string } = {
-            inactive: "/en/inactive-user",
-            pending: "/en/pending-user",
-            dormant: "/en/dormant-user",
-            expired: "/en/user",
-            active: "/en/user",
+            inactive: "inactive-user",
+            pending: "pending-user",
+            dormant: "dormant-user",
+            expired: "user",
+            active: "user",
           };
-          router.push(userRoutes[status] || "/en/user");
+          router.push(userRoutes[status] || "user");
         }
       } else {
         setErrorMessage(data.error || "Login failed");
