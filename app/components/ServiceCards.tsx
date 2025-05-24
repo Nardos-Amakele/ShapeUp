@@ -48,7 +48,7 @@ const Carousel = ({
             description: 'New service package coming soon',
             services: [],
             buttonText: 'Notify Me',
-            color: '#e5e7eb',
+            color: '#FFFFFF',
           }),
         ];
 
@@ -76,7 +76,7 @@ const Carousel = ({
   };
 
   return (
-    <div className="relative w-full h-[450px] overflow-hidden" ref={carouselRef}>
+    <div className="relative w-full h-[450px] overflow-hidden bg-black" ref={carouselRef}>
       <motion.div
         className="flex items-center justify-center h-full"
         drag="x"
@@ -101,7 +101,8 @@ const Carousel = ({
                 zIndex: zIndex * 10,
                 width: `${cardWidth}px`,
                 height: `${isCenter ? cardHeight * 1.1 : cardHeight}px`,
-                backgroundColor: item.color || '#fff',
+                backgroundColor: isCenter ? '#FFFF20' : '#FFFFFF',
+                border: isCenter ? '3px solid #000000' : '1px solid #DDDDDD',
               }}
               initial={{ x: xOffset, scale, opacity }}
               animate={{ x: xOffset, scale, opacity }}
@@ -112,29 +113,43 @@ const Carousel = ({
               }
             >
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
+                <h3 className={`text-xl font-bold mb-3 ${isCenter ? 'text-black' : 'text-gray-900'}`}>
+                  {item.title}
+                </h3>
+                <p className={`mb-4 text-sm ${isCenter ? 'text-gray-900' : 'text-gray-600'}`}>
+                  {item.description}
+                </p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-2">Includes:</h4>
+                  <h4 className={`font-semibold mb-2 ${isCenter ? 'text-black' : 'text-gray-800'}`}>
+                    Includes:
+                  </h4>
                   <ul className="space-y-2">
                     {item.services.map((service: { id: Key | null | undefined; name: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }) => (
                       <li key={service.id} className="flex items-center">
-                        <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg 
+                          className="w-4 h-4 mr-2" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                          style={{ color: isCenter ? '#000000' : '#22C55E' }}
+                        >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-sm text-gray-700">{service.name}</span>
+                        <span className={`text-sm ${isCenter ? 'text-black' : 'text-gray-700'}`}>
+                          {service.name}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
                 <button 
-                  className={`mt-auto w-full py-2 px-4 rounded-lg font-medium ${
+                  className={`mt-auto w-full py-2 px-4 rounded-lg font-medium transition-colors ${
                     isCenter 
-                      ? 'bg-yellow-400 hover:bg-yellow-500 text-gray-900' 
+                      ? 'bg-black hover:bg-gray-900 text-white' 
                       : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
-                  } transition-colors`}
+                  }`}
                 >
                   {item.buttonText}
                 </button>
@@ -146,7 +161,7 @@ const Carousel = ({
 
       <button
         onClick={goToPrev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-50 p-2 text-yellow-400 hover:text-yellow-500 transition-colors"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-50 p-2 text-yellow-400 hover:text-yellow-500 transition-colors bg-black rounded-full border-2 border-yellow-400"
         aria-label="Previous"
       >
         <svg
@@ -161,7 +176,7 @@ const Carousel = ({
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-50 p-2 text-yellow-400 hover:text-yellow-500 transition-colors"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-50 p-2 text-yellow-400 hover:text-yellow-500 transition-colors bg-black rounded-full border-2 border-yellow-400"
         aria-label="Next"
       >
         <svg
@@ -181,7 +196,7 @@ const Carousel = ({
             key={`indicator-${index}`}
             onClick={() => setActiveIndex(index)}
             className={`w-3 h-3 rounded-full transition-all ${
-              index === activeIndex ? 'bg-yellow-400 w-6' : 'bg-gray-300'
+              index === activeIndex ? 'bg-yellow-400 w-6' : 'bg-white'
             }`}
             aria-label={`Go to item ${index + 1}`}
           />
