@@ -21,37 +21,35 @@ export default function Page() {
             {/* Hero Section */}
             <section
                 className="h-screen bg-cover bg-center flex flex-col justify-center items-center text-white relative"
-                style={{ backgroundImage: "url('/coverPic.jpg')" }} // Replace with your actual image
+                style={{ backgroundImage: "url('/coverPic.jpg')" }}
             >
-                <h1 className="text-5xl  ml-20 font-bold mb-6 text-[#FFF200]">Get in Touch</h1>
+                <h1 className="text-5xl ml-20 font-bold mb-6 text-[#FFF200]">Get in Touch</h1>
                 <button
                     onClick={scrollToContact}
                     className="text-white border-2 border-white bg-[#525252] w-14 h-14 flex items-center justify-center rounded-full ml-20 text-3xl animate-bounce mt-4"
                 >
                     <FaArrowDown />
                 </button>
-
             </section>
 
             {/* Contact Section */}
-            <section ref={contactRef} className="py-20 px-10 md:px-32 bg-black">
-
-                <div className="flex flex-col md:flex-row gap-10">
+            <section ref={contactRef} className="py-20 px-6 md:px-10 bg-black">
+                <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-10">
                     {/* Left: Contact Info */}
-                    <div className="flex-1 space-y-2 mt-10">
+                    <div className="flex-1 space-y-2 mt-10 text-center md:text-left">
                         <h2 className='text-[#FFF200] text-lg font-light'>Contact </h2>
                         <p className='text-2xl'>Have any questions?</p>
-                        <p className='text-2xl'> Feel free to reach out</p>
-                        <p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem i lorem i</p>
-                        <div className="flex items-center gap-4">
+                        <p className='text-2xl'>Feel free to reach out</p>
+                        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem i lorem i</p>
+                        <div className="flex items-center justify-center md:justify-start gap-4">
                             <FaPhone className="text-[#FFF200] text-xl" />
                             <p className='text-sm'>+123 456 7890</p>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center justify-center md:justify-start gap-4">
                             <FaEnvelope className="text-[#FFF200] text-xl" />
                             <p className='text-sm'>info@shapeup.com</p>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center justify-center md:justify-start gap-4">
                             <FaMapMarkerAlt className="text-[#FFF200] text-xl" />
                             <p className='text-sm'>123 Fitness St, Fit City</p>
                         </div>
@@ -59,16 +57,16 @@ export default function Page() {
 
                     {/* Right: Contact Form */}
                     <form className="flex-1 p-8 rounded shadow space-y-4">
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 flex-col sm:flex-row">
                             <input
                                 type="text"
                                 placeholder="Name"
-                                className="w-1/2 p-2 border-b-2 border-[#FFF200] rounded"
+                                className="w-full sm:w-1/2 p-2 border-b-2 border-[#FFF200] rounded"
                             />
                             <input
                                 type="text"
                                 placeholder="Phone Number"
-                                className="w-1/2 p-2 border-b-2 border-[#FFF200] rounded"
+                                className="w-full sm:w-1/2 p-2 border-b-2 border-[#FFF200] rounded"
                             />
                         </div>
                         <input
@@ -92,8 +90,8 @@ export default function Page() {
             </section>
 
             {/* Map Section */}
-            <section className="w-full px-30 mb-40 h-[400px]">
-                <div className="w-full h-full filter brightness-75">
+            <section className="w-full mb-40 px-6">
+                <div className="max-w-4xl mx-auto h-[400px] w-full filter brightness-75">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9022265180504!2d90.39094131543133!3d23.750903594624487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a0d0a2d1f3%3A0x72510545dc1c2f03!2sDhaka!5e0!3m2!1sen!2sbd!4v1632835683646!5m2!1sen!2sbd"
                         width="100%"
@@ -104,7 +102,6 @@ export default function Page() {
                     ></iframe>
                 </div>
             </section>
-
 
             <Footer />
         </>
